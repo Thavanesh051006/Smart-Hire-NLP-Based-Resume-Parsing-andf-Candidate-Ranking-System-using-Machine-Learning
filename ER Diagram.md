@@ -58,4 +58,4 @@ The system architecture utilizes standard relational matrices, maintaining high 
 
 ## 🖼️ Visual ER Diagram Layout
 
-![Smart-Hire ER Diagram](./your_er_diagram_image_name.jpg)
+![Smart-Hire ER Diagram](./er-diagram.jpg)
