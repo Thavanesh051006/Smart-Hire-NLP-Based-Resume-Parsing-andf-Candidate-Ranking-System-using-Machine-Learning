@@ -1,43 +1,62 @@
-# SMART-HIRE: NLP-BASED RESUME PARSING AND CANDIDATE RANKING SYSTEM
-## 1. PROJECT TITLE
-**Smart-Hire: NLP-Based Resume Parsing and Candidate Ranking System using Machine Learning**
----
-## 2. PROBLEM STATEMENT
-Traditional recruitment processes are incredibly time-consuming and prone to human bias. HR managers often have to manually sift through hundreds of resumes (PDF/Word format) for a single job opening, making it easy to miss qualified candidates. There is a critical need for an automated, intelligent system that can parse unstructured resumes, extract key skills/experience using Natural Language Processing (NLP), and rank candidates accurately based on job descriptions.
----
-## 3. PROJECT OBJECTIVES
-### Primary Objectives:
-* Build an automated recruitment platform to parse unstructured resumes in real-time.
-* Utilize Natural Language Processing (NLP) to extract entity data like Skills, Experience, Education, and Contact Info.
-* Implement Machine Learning algorithms (Cosine Similarity/TF-IDF) to score and rank candidates against specific Job Descriptions (JD).
-### Secondary Objectives:
-* Provide a clean dashboard for HR/Recruiters to post jobs and view top-ranked candidates instantly.
-* Secure applicant data and resume files using industry-standard backend practices.
-* Generate analytical reports on the candidate pool for better talent acquisition insights.
----
-## 4. MODULE LIST
-### Module 1: User & Authentication Management
-* **Features:** Secure login and registration for Recruiters/HR and Candidates, role-based dashboards, and JWT authentication.
-### Module 2: Resume Ingestion & NLP Parsing
-* **Features:** Drag-and-drop resume upload (PDF/Docx), text extraction, and Named Entity Recognition (NER) using NLP to identify skills, experience, and education.
-### Module 3: Job Description (JD) Management
-* **Features:** HR portal to create, edit, and publish job vacancies with mandatory skills, experience level, and qualification requirements.
-### Module 4: ML Ranking & Recommendation Engine
-* **Features:** Feature extraction using TF-IDF, similarity scoring between parsed resumes and JDs, and dynamic candidate ranking generation.
-### Module 5: Recruiter Analytics & Notification
-* **Features:** Interactive charts showing top applicants, automated email notifications to shortlisted candidates, and ranking report downloads.
----
-## 5. DATABASE TABLE LIST (Based on 1000119968.jpg Tech Stack)
+# Smart-Hire: NLP-Based Resume Parsing and Candidate Ranking System
 
-| S.No | Table Name | Description |
-| :--- | :--- | :--- |
-| 1 | **USERS Table** | Stores login credentials, roles (HR/Admin/Candidate), and account verification status. |
-| 2 | **JOB_POSTINGS Table** | Stores job details posted by HR, including Title, Required Skills, and Min Experience. |
-| 3 | **CANDIDATE_PROFILES** | Logs parsed applicant data like Name, Email, extracted Skills, and total Years of Experience. |
-| 4 | **RESUME_FILES Table** | Manages metadata of uploaded resumes, including the safe File_Path/URL and Upload_Date. |
-| 5 | **RANKING_REPORTS** | Stores ML-generated Cosine Similarity scores, final match percentages, and rank for specific jobs. |
-| 6 | **NOTIFICATIONS Table** | Logs automated email/SMS trigger statuses for shortlisting or interview updates. |
+## 1. Project Abstract
+Smart-Hire is an intelligent recruitment platform designed to automate the manual resume screening process. By leveraging **Natural Language Processing (NLP)** and **Machine Learning (ML)**, the system extracts structured information from unstructured resume files (PDF/DOCX) and dynamically ranks candidates based on their match percentage with job descriptions. This solution aims to reduce recruitment time by 80% and eliminate human bias in talent acquisition.
 
 ---
-## 6. EXPECTED OUTCOME
-The **Smart-Hire** platform will revolutionize talent acquisition by reducing resume screening time from hours to seconds. By combining powerful Java Spring Boot enterprise backend with Python NLP models, the system ensures a highly scalable, objective, and accurate candidate shortlisting workflow, helping companies hire the right talent instantly.
+
+## 2. Problem Statement
+* **High Volume:** HR managers struggle to manually screen hundreds of resumes per job opening.
+* **Unstructured Data:** Resumes come in various formats, making keyword-based searches inefficient.
+* **Human Bias:** Manual screening is prone to subjective bias and fatigue.
+* **Delayed Hiring:** The manual process slows down the overall recruitment cycle, leading to the loss of top talent.
+
+---
+
+## 3. Project Objectives
+* **Automated Parsing:** Use NLP (SpaCy) to extract skills, experience, and education from resumes.
+* **Algorithmic Ranking:** Implement TF-IDF and Cosine Similarity to calculate match scores.
+* **Scalable Architecture:** Build a full-stack system using Java Spring Boot and React.js.
+* **Data Security:** Ensure candidate privacy using Spring Security and JWT.
+
+---
+
+## 4. System Modules
+1. **User Authentication:** Secure JWT-based login for HR and Candidates.
+2. **Resume Parser:** NLP engine to extract text and entities (Skills, Experience, etc.).
+3. **Job Management:** HR portal to post and manage job requirements.
+4. **Ranking Engine:** ML model to score resumes against job requirements.
+5. **Analytics Dashboard:** Visual charts to view top-ranked candidates.
+
+---
+
+## 5. Technical Stack
+* **Frontend:** React.js, Bootstrap 5
+* **Backend:** Java, Spring Boot, Spring Security (JWT)
+* **Database:** MySQL
+* **AI/ML:** Python (FastAPI, SpaCy, Scikit-Learn)
+
+---
+
+## 6. Machine Learning Logic
+1. **Text Extraction:** Raw text is pulled from uploaded documents.
+2. **Vectorization:** Text is converted into mathematical vectors using **TF-IDF**.
+3. **Similarity Scoring:** **Cosine Similarity** is calculated to find the match percentage between the Resume and Job Description.
+4. **Leaderboard:** Candidates are sorted based on their match percentage.
+
+---
+
+## 7. Database Architecture
+* **USERS:** Stores credentials and roles.
+* **JOB_POSTINGS:** Stores requirements and descriptions.
+* **CANDIDATE_PROFILES:** Stores extracted skills and parsed metrics.
+* **RESUME_FILES:** Manages file metadata and paths.
+* **RANKING_REPORTS:** Stores match scores and rank index.
+
+---
+
+## 8. Impact
+* **Efficiency:** Reduces resume screening time by 80%.
+* **Objectivity:** Ensures a merit-based, bias-free selection process.
+* **Scalability:** Handles a large volume of applications effortlessly.
+*
